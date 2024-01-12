@@ -29,7 +29,7 @@ export const Status = styled.span`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: ${props => (props.isOnline ? 'green' : 'red')};
+  background-color: red;
   margin-right: 10px;
 `;
 
