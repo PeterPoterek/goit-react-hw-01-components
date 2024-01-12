@@ -9,6 +9,11 @@ const getRandomColor = () => {
 };
 
 export const StatisticsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 8px;
@@ -18,7 +23,6 @@ export const StatisticsContainer = styled.div`
 export const StatisticsTitle = styled.h2`
   text-align: center;
 
-  color: #333;
   font-size: 24px;
 `;
 
