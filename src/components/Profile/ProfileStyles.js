@@ -30,7 +30,6 @@ export const Name = styled.p`
 `;
 
 export const Tag = styled.p`
-  color: gray;
   margin: 5px 0;
 `;
 

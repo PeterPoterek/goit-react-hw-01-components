@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
 
 body {
   margin: 0;
@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #334155;
-  color: white;
+  color: #e7e5e4;
 }
 
 code {
