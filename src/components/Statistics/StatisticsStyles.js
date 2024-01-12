@@ -38,6 +38,7 @@ export const StatisticsListItem = styled.li`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  width: 75px;
 
   ${props => css`
     background-color: ${getRandomColor()};
