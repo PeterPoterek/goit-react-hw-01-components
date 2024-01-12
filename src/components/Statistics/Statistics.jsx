@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   StatisticsContainer,
@@ -25,6 +26,11 @@ const Statistics = ({ title, stats }) => {
       </StatisticsList>
     </StatisticsContainer>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Statistics;

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {
   FriendListContainer,
   FriendListUl,
@@ -28,6 +30,10 @@ const FriendList = ({ friends }) => {
       </FriendListUl>
     </FriendListContainer>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default FriendList;
