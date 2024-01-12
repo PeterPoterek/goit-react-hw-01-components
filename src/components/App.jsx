@@ -3,16 +3,20 @@ import Statistics from './Statistics/Statistics.jsx';
 
 import user from './Profile/user.json';
 import data from './Statistics/data.json';
+import friends from './FriendList/friends.json';
 
 import styled from 'styled-components';
+import FriendList from './FriendList/FriendList.jsx';
 
 const TasksContatiner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  gap: 10rem;
+  gap: 5rem;
+
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 `;
 
 export const App = () => {
@@ -28,6 +32,8 @@ export const App = () => {
         />
 
         <Statistics title={'Upload Stats'} stats={data} />
+
+        <FriendList friends={friends} />
       </TasksContatiner>
     </>
   );

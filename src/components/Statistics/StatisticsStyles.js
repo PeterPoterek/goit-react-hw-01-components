@@ -30,7 +30,6 @@ export const StatisticsList = styled.ul`
   display: flex;
   list-style-type: none;
   padding: 0;
-  gap: 1rem;
 `;
 
 export const StatisticsListItem = styled.li`
@@ -39,7 +38,6 @@ export const StatisticsListItem = styled.li`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border-radius: 8px;
 
   ${props => css`
     background-color: ${getRandomColor()};
