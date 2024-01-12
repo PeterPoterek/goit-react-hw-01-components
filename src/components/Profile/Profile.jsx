@@ -1,30 +1,42 @@
 import React from 'react';
+import {
+  ProfileContainer,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  StatsList,
+  StatItem,
+  Label,
+  Quantity,
+} from './ProfileStyles';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <ProfileContainer>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <StatsList>
+        <StatItem>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
+        </StatItem>
+        <StatItem>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
+        </StatItem>
+        <StatItem>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
+        </StatItem>
+      </StatsList>
+    </ProfileContainer>
   );
 };
 
