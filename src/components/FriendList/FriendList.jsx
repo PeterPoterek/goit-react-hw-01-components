@@ -1,29 +1,20 @@
 import PropTypes from 'prop-types';
+import FriendListItem from 'components/FriendListItem/FriendListItem.jsx';
 
-import {
-  FriendListContainer,
-  FriendListUl,
-  FriendListItem,
-  Status,
-  Avatar,
-  Name,
-} from './FriendListStyles';
+import { FriendListContainer, FriendListUl } from './FriendListStyles';
 
 const FriendList = ({ friends }) => {
   return (
     <FriendListContainer>
       <FriendListUl>
         {friends.map(friend => {
-          const statusColor = {
-            backgroundColor: friend.isOnline ? 'green' : 'red',
-          };
-
           return (
-            <FriendListItem key={friend.id}>
-              <Status style={statusColor} />
-              <Avatar src={friend.avatar} />
-              <Name>{friend.name}</Name>
-            </FriendListItem>
+            <FriendListItem
+              key={friend.id}
+              avatar={friend.avatar}
+              name={friend.name}
+              isOnline={friend.isOnline}
+            />
           );
         })}
       </FriendListUl>
