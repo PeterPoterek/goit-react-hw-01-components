@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 import {
   StatisticsContainer,
   StatisticsTitle,
@@ -8,10 +7,11 @@ import {
   Label,
   Percentage,
 } from './StatisticsStyles';
+
 const Statistics = ({ title, stats }) => {
   return (
     <StatisticsContainer>
-      <StatisticsTitle>{title}</StatisticsTitle>
+      {title && <StatisticsTitle>{title}</StatisticsTitle>}
 
       <StatisticsList>
         {stats.map(stat => {
